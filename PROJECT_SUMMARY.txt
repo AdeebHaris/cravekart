@@ -1,0 +1,200 @@
+================================================================================
+CRAVEKART - TECHNICAL ARCHITECTURE & SYSTEMS OVERVIEW
+================================================================================
+
+CraveKart is a full-stack, enterprise-grade food discovery and ordering web 
+application built with modern web technologies, real-time protocols, security 
+standards, and artificial intelligence.
+
+Key Technologies Included:
+- Server-Sent Events (SSE) for Real-Time Streaming
+- Zod Schema Validation for Backend Payload Security
+- Auth0 (OAuth 2.0 / OIDC) & Dual-Token JWT Authentication
+- Groq AI (Llama 3.3 70B LLM) for Natural Language Search Intent Parsing
+- Redux Toolkit for State Management & Async Thunks
+- PostgreSQL Database with Native Connection Pooling (pg pool)
+- i18next Framework for Client-Side Multi-Language Translation
+- Leaflet Maps & Google Maps API for GIS Location Visualizations
+- Express 5 + TypeScript Server Architecture
+
+
+================================================================================
+CORE TECHNOLOGIES & ARCHITECTURAL SUMMARY
+================================================================================
+
+1. REAL-TIME STREAMING: Server-Sent Events (SSE)
+   - Library: @microsoft/fetch-event-source
+   - Purpose: Enables real-time, unidirectional HTTP streaming from server 
+     to client without the overhead of WebSockets.
+
+2. INPUT VALIDATION: Zod Schema Validation
+   - Library: zod
+   - Purpose: Enforces runtime type-safety and request payload validation 
+     before requests hit database controllers.
+
+3. AUTHENTICATION: Auth0 + Dual-Token JWT
+   - Libraries: @auth0/auth0-react, jsonwebtoken, bcrypt
+   - Purpose: Combines Auth0 OAuth 2.0 / OIDC social login with native 
+     Access & Refresh token rotation for secure user sessions.
+
+4. AI & NLP INFERENCE: Groq Cloud AI (Llama 3.3 70B LLM)
+   - Provider: Groq Cloud API
+   - Purpose: High-speed LLM inference for parsing conversational search queries 
+     (e.g., "spicy veg biryani under 300 rs").
+
+5. STATE MANAGEMENT: Redux Toolkit
+   - Libraries: @reduxjs/toolkit, react-redux
+   - Purpose: Manages global cart, restaurant lists, and menu items using 
+     decoupled state slices and Redux Async Thunks.
+
+6. DATABASE TIER: PostgreSQL Database
+   - Driver: pg (native PostgreSQL pool)
+   - Purpose: Relational database with connection pooling and parameterized 
+     SQL query protection.
+
+7. INTERNATIONALIZATION: i18next Framework
+   - Libraries: i18next, react-i18next, i18next-browser-languagedetector
+   - Purpose: Multi-language engine with automatic browser language detection.
+
+8. MAPS & GEOLOCATION: Leaflet & Google Maps API
+   - Libraries: leaflet, @googlemaps/js-api-loader
+   - Purpose: Renders interactive GIS map pins for restaurant coordinates.
+
+9. SERVER FRAMEWORK: Express 5 + TypeScript
+   - Framework: Express 5 on Node.js
+   - Purpose: Asynchronous REST API server with custom router middlewares.
+
+
+================================================================================
+1. SERVER-SENT EVENTS (SSE) PROTOCOL
+================================================================================
+
+Purpose & Architecture:
+Instead of using heavy WebSocket handshakes or inefficient HTTP long-polling, 
+CraveKart uses Server-Sent Events (SSE) via @microsoft/fetch-event-source to 
+maintain a persistent, lightweight HTTP stream from the backend server to the client.
+
+Key Use Cases in CraveKart:
+- Live Order Status Tracking: Real-time updates pushed from the backend as orders 
+  transition through states (Received -> Preparing -> Out for Delivery -> Delivered).
+- Live Cart & Price Sync: Instant notifications for menu item availability 
+  or price adjustments.
+
+Implementation Details:
+- Client: Uses fetchEventSource in Cart component and Menu component to listen 
+  to event streams with automatic reconnection logic.
+- Server: Configures response headers for streaming:
+  Content-Type: text/event-stream
+  Cache-Control: no-cache
+  Connection: keep-alive
+
+
+================================================================================
+2. ZOD SCHEMA VALIDATION & MIDDLEWARE ENGINE
+================================================================================
+
+Purpose:
+To prevent invalid payloads, malicious inputs, or malformed requests from 
+reaching the database controller, CraveKart uses Zod for strict runtime type-checking.
+
+Implementation Details:
+- Schema Definitions: Defined in Backend validation schemas (auth schema, profile schema).
+- Validation Middleware: A generic middleware (payloadValidation) intercepts 
+  incoming requests and parses req.body against the Zod schema. If validation fails, 
+  it returns a 400 Bad Request response with structured error messages.
+
+
+================================================================================
+3. HYBRID AUTHENTICATION: AUTH0 & DUAL-TOKEN JWT
+================================================================================
+
+CraveKart supports a hybrid authentication architecture combining third-party 
+Social Logins with native JWT token rotation.
+
+Flow Diagram:
+
+                  [ User Login Trigger ]
+                            |
+               Which Auth Method Selected?
+              /                           \
+     [ Auth0 OAuth 2.0 ]           [ Native Backend ]
+     (Google / Social)             (Email + Password)
+              |                            |
+    OAuth Auth Code Grant         Bcrypt Password Verify
+              \                           /
+               \                         /
+            [ Generate Access & Refresh Tokens ]
+
+Auth0 Integration:
+- Configured via @auth0/auth0-react in Auth0ProviderWithNavigate.
+- Handles universal login redirects, Google social sign-in, and ID tokens.
+
+Native Dual-Token Strategy:
+- Access Tokens: Short-lived JWTs (15 mins) passed in HTTP Authorization headers.
+- Refresh Tokens: Long-lived JWTs stored securely for renewing expired Access Tokens.
+- Password Hashing: Bcrypt salted password hashing ensures zero plain-text passwords 
+  in the database.
+
+
+================================================================================
+4. GROQ CLOUD AI ENGINE (LLAMA 3.3 70B LLM)
+================================================================================
+
+Purpose & Capabilities:
+Integrates the Groq API (llama-3.3-70b-versatile) for natural language search intent parsing.
+
+Capabilities:
+- Natural Language Intent Extraction: Converts queries like "spicy veg noodles under 250 rs" 
+  into structured objects containing keywords, veg requirement (true/false), and budget limits.
+- Local Regex Pre-Filtering: Runs local Regex filters first to block repeated character 
+  spam (hhhhhh), vowel-less long strings (sdfghj), or symbol noise (!!!) locally before 
+  calling the Groq API.
+- JSON Output Sanitization: Strips markdown backticks (```json) before calling JSON.parse().
+
+
+================================================================================
+5. REDUX TOOLKIT ARCHITECTURE & ASYNC THUNKS
+================================================================================
+
+State Architecture:
+Global state is managed via Redux Toolkit split into domain slices:
+
+1. restaurantSlice: Manages master restaurant lists, search filters, and loading states.
+2. menuSlice: Handles restaurant menu items, category filters, and active dishes.
+3. cartSlice: Tracks shopping cart items, quantities, subtotal, tax/delivery fees, 
+   and checkout state.
+
+Key Features:
+- Redux Async Thunks (createAsyncThunk): Encapsulates async backend API calls with 
+  automated pending, fulfilled, and rejected state handlers.
+- Typed Hooks: Custom wrapper hooks (useAppSelector, useAppDispatch) ensure full 
+  TypeScript type-safety.
+- Immer.js Integration: Enables clean mutable-style state logic under the hood.
+
+
+================================================================================
+6. INTERNATIONALIZATION & MAPS GEOLOCATION
+================================================================================
+
+i18next Framework:
+- Configured via i18next and react-i18next for multi-language translation.
+- Automatically detects user browser language settings.
+
+Leaflet & Google Maps API:
+- Integrated via leaflet and @googlemaps/js-api-loader in RestaurantMap component.
+- Maps spatial latitude and longitude coordinates to interactive pins on screen.
+
+
+================================================================================
+SUMMARY OF TECHNICAL STACK DEPENDENCIES
+================================================================================
+
+- Protocols & APIs: Server-Sent Events (SSE), Groq LLM Cloud API, OAuth 2.0 / OIDC
+- Security & Validation: Zod Schema Validation, JWT (jsonwebtoken), Bcrypt Hashing
+- State & UI: Redux Toolkit, React Router v7, i18next, TailwindCSS v4, Lucide React
+- GIS & Maps: Leaflet Maps, Google Maps JS API Loader
+- Backend Runtime: Express 5, TypeScript, PostgreSQL (pg pool)
+
+================================================================================
+End of Technical Summary Document
+================================================================================
