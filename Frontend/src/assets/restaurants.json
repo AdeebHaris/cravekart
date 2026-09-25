@@ -1,0 +1,812 @@
+[
+  {
+    "id": 1,
+    "name": "Burger Junction",
+    "image": "src/assets/restaurants/burger-junction.jpg",
+    "deliveryTime": "19 min",
+    "distance": "1.0 km",
+    "rating": 4.1,
+    "type": "Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 1A",
+        "price": 125,
+        "image": "src/assets/menu/special-dish-1a.jpg"
+      },
+      {
+        "name": "Special Dish 1B",
+        "price": 185,
+        "image": "src/assets/menu/special-dish-1b.jpg"
+      },
+      {
+        "name": "Special Dish 1C",
+        "price": 245,
+        "image": "src/assets/menu/special-dish-1c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pizza Palace",
+    "image": "src/assets/restaurants/pizza-palace.jpg",
+    "deliveryTime": "20 min",
+    "distance": "1.2 km",
+    "rating": 4.2,
+    "type": "Veg & Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 2A",
+        "price": 130,
+        "image": "src/assets/menu/special-dish-2a.jpg"
+      },
+      {
+        "name": "Special Dish 2B",
+        "price": 190,
+        "image": "src/assets/menu/special-dish-2b.jpg"
+      },
+      {
+        "name": "Special Dish 2C",
+        "price": 250,
+        "image": "src/assets/menu/special-dish-2c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Biryani House",
+    "image": "src/assets/restaurants/biryani-house.jpg",
+    "deliveryTime": "21 min",
+    "distance": "1.4 km",
+    "rating": 4.3,
+    "type": "Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 3A",
+        "price": 135,
+        "image": "src/assets/menu/special-dish-3a.jpg"
+      },
+      {
+        "name": "Special Dish 3B",
+        "price": 195,
+        "image": "src/assets/menu/special-dish-3b.jpg"
+      },
+      {
+        "name": "Special Dish 3C",
+        "price": 255,
+        "image": "src/assets/menu/special-dish-3c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Green Bowl",
+    "image": "src/assets/restaurants/green-bowl.jpg",
+    "deliveryTime": "22 min",
+    "distance": "1.6 km",
+    "rating": 4.4,
+    "type": "Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 4A",
+        "price": 140,
+        "image": "src/assets/menu/special-dish-4a.jpg"
+      },
+      {
+        "name": "Special Dish 4B",
+        "price": 200,
+        "image": "src/assets/menu/special-dish-4b.jpg"
+      },
+      {
+        "name": "Special Dish 4C",
+        "price": 260,
+        "image": "src/assets/menu/special-dish-4c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Arabian Nights",
+    "image": "src/assets/restaurants/arabian-nights.jpg",
+    "deliveryTime": "23 min",
+    "distance": "1.8 km",
+    "rating": 4.5,
+    "type": "Veg & Non Veg",
+    "isOpen": false,
+    "menu": [
+      {
+        "name": "Special Dish 5A",
+        "price": 145,
+        "image": "src/assets/menu/special-dish-5a.jpg"
+      },
+      {
+        "name": "Special Dish 5B",
+        "price": 205,
+        "image": "src/assets/menu/special-dish-5b.jpg"
+      },
+      {
+        "name": "Special Dish 5C",
+        "price": 265,
+        "image": "src/assets/menu/special-dish-5c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Spice Route",
+    "image": "src/assets/restaurants/spice-route.jpg",
+    "deliveryTime": "24 min",
+    "distance": "2.0 km",
+    "rating": 4.6,
+    "type": "Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 6A",
+        "price": 150,
+        "image": "src/assets/menu/special-dish-6a.jpg"
+      },
+      {
+        "name": "Special Dish 6B",
+        "price": 210,
+        "image": "src/assets/menu/special-dish-6b.jpg"
+      },
+      {
+        "name": "Special Dish 6C",
+        "price": 270,
+        "image": "src/assets/menu/special-dish-6c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Taco Fiesta",
+    "image": "src/assets/restaurants/taco-fiesta.jpg",
+    "deliveryTime": "25 min",
+    "distance": "2.2 km",
+    "rating": 4.7,
+    "type": "Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 7A",
+        "price": 155,
+        "image": "src/assets/menu/special-dish-7a.jpg"
+      },
+      {
+        "name": "Special Dish 7B",
+        "price": 215,
+        "image": "src/assets/menu/special-dish-7b.jpg"
+      },
+      {
+        "name": "Special Dish 7C",
+        "price": 275,
+        "image": "src/assets/menu/special-dish-7c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Pasta Point",
+    "image": "src/assets/restaurants/pasta-point.jpg",
+    "deliveryTime": "26 min",
+    "distance": "2.4 km",
+    "rating": 4.8,
+    "type": "Veg & Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 8A",
+        "price": 160,
+        "image": "src/assets/menu/special-dish-8a.jpg"
+      },
+      {
+        "name": "Special Dish 8B",
+        "price": 220,
+        "image": "src/assets/menu/special-dish-8b.jpg"
+      },
+      {
+        "name": "Special Dish 8C",
+        "price": 280,
+        "image": "src/assets/menu/special-dish-8c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Dosa Corner",
+    "image": "src/assets/restaurants/dosa-corner.jpg",
+    "deliveryTime": "27 min",
+    "distance": "2.6 km",
+    "rating": 4.9,
+    "type": "Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 9A",
+        "price": 165,
+        "image": "src/assets/menu/special-dish-9a.jpg"
+      },
+      {
+        "name": "Special Dish 9B",
+        "price": 225,
+        "image": "src/assets/menu/special-dish-9b.jpg"
+      },
+      {
+        "name": "Special Dish 9C",
+        "price": 285,
+        "image": "src/assets/menu/special-dish-9c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Kebab Kingdom",
+    "image": "src/assets/restaurants/kebab-kingdom.jpg",
+    "deliveryTime": "28 min",
+    "distance": "2.8 km",
+    "rating": 4.0,
+    "type": "Non Veg",
+    "isOpen": false,
+    "menu": [
+      {
+        "name": "Special Dish 10A",
+        "price": 170,
+        "image": "src/assets/menu/special-dish-10a.jpg"
+      },
+      {
+        "name": "Special Dish 10B",
+        "price": 230,
+        "image": "src/assets/menu/special-dish-10b.jpg"
+      },
+      {
+        "name": "Special Dish 10C",
+        "price": 290,
+        "image": "src/assets/menu/special-dish-10c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Chinese Wok",
+    "image": "src/assets/restaurants/chinese-wok.jpg",
+    "deliveryTime": "29 min",
+    "distance": "3.0 km",
+    "rating": 4.1,
+    "type": "Veg & Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 11A",
+        "price": 175,
+        "image": "src/assets/menu/special-dish-11a.jpg"
+      },
+      {
+        "name": "Special Dish 11B",
+        "price": 235,
+        "image": "src/assets/menu/special-dish-11b.jpg"
+      },
+      {
+        "name": "Special Dish 11C",
+        "price": 295,
+        "image": "src/assets/menu/special-dish-11c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Seafood Shack",
+    "image": "src/assets/restaurants/seafood-shack.jpg",
+    "deliveryTime": "30 min",
+    "distance": "3.2 km",
+    "rating": 4.2,
+    "type": "Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 12A",
+        "price": 180,
+        "image": "src/assets/menu/special-dish-12a.jpg"
+      },
+      {
+        "name": "Special Dish 12B",
+        "price": 240,
+        "image": "src/assets/menu/special-dish-12b.jpg"
+      },
+      {
+        "name": "Special Dish 12C",
+        "price": 300,
+        "image": "src/assets/menu/special-dish-12c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Roll Express",
+    "image": "src/assets/restaurants/roll-express.jpg",
+    "deliveryTime": "31 min",
+    "distance": "3.4 km",
+    "rating": 4.3,
+    "type": "Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 13A",
+        "price": 185,
+        "image": "src/assets/menu/special-dish-13a.jpg"
+      },
+      {
+        "name": "Special Dish 13B",
+        "price": 245,
+        "image": "src/assets/menu/special-dish-13b.jpg"
+      },
+      {
+        "name": "Special Dish 13C",
+        "price": 305,
+        "image": "src/assets/menu/special-dish-13c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "The Grill Hub",
+    "image": "src/assets/restaurants/the-grill-hub.jpg",
+    "deliveryTime": "32 min",
+    "distance": "3.6 km",
+    "rating": 4.4,
+    "type": "Veg & Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 14A",
+        "price": 190,
+        "image": "src/assets/menu/special-dish-14a.jpg"
+      },
+      {
+        "name": "Special Dish 14B",
+        "price": 250,
+        "image": "src/assets/menu/special-dish-14b.jpg"
+      },
+      {
+        "name": "Special Dish 14C",
+        "price": 310,
+        "image": "src/assets/menu/special-dish-14c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Veggie Delight",
+    "image": "src/assets/restaurants/veggie-delight.jpg",
+    "deliveryTime": "33 min",
+    "distance": "3.8 km",
+    "rating": 4.5,
+    "type": "Veg",
+    "isOpen": false,
+    "menu": [
+      {
+        "name": "Special Dish 15A",
+        "price": 195,
+        "image": "src/assets/menu/special-dish-15a.jpg"
+      },
+      {
+        "name": "Special Dish 15B",
+        "price": 255,
+        "image": "src/assets/menu/special-dish-15b.jpg"
+      },
+      {
+        "name": "Special Dish 15C",
+        "price": 315,
+        "image": "src/assets/menu/special-dish-15c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Sushi World",
+    "image": "src/assets/restaurants/sushi-world.jpg",
+    "deliveryTime": "34 min",
+    "distance": "4.0 km",
+    "rating": 4.6,
+    "type": "Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 16A",
+        "price": 200,
+        "image": "src/assets/menu/special-dish-16a.jpg"
+      },
+      {
+        "name": "Special Dish 16B",
+        "price": 260,
+        "image": "src/assets/menu/special-dish-16b.jpg"
+      },
+      {
+        "name": "Special Dish 16C",
+        "price": 320,
+        "image": "src/assets/menu/special-dish-16c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Momo Station",
+    "image": "src/assets/restaurants/momo-station.jpg",
+    "deliveryTime": "35 min",
+    "distance": "4.2 km",
+    "rating": 4.7,
+    "type": "Veg & Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 17A",
+        "price": 205,
+        "image": "src/assets/menu/special-dish-17a.jpg"
+      },
+      {
+        "name": "Special Dish 17B",
+        "price": 265,
+        "image": "src/assets/menu/special-dish-17b.jpg"
+      },
+      {
+        "name": "Special Dish 17C",
+        "price": 325,
+        "image": "src/assets/menu/special-dish-17c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Wrap Nation",
+    "image": "src/assets/restaurants/wrap-nation.jpg",
+    "deliveryTime": "36 min",
+    "distance": "4.4 km",
+    "rating": 4.8,
+    "type": "Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 18A",
+        "price": 210,
+        "image": "src/assets/menu/special-dish-18a.jpg"
+      },
+      {
+        "name": "Special Dish 18B",
+        "price": 270,
+        "image": "src/assets/menu/special-dish-18b.jpg"
+      },
+      {
+        "name": "Special Dish 18C",
+        "price": 330,
+        "image": "src/assets/menu/special-dish-18c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Cafe Aroma",
+    "image": "src/assets/restaurants/cafe-aroma.jpg",
+    "deliveryTime": "37 min",
+    "distance": "4.6 km",
+    "rating": 4.9,
+    "type": "Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 19A",
+        "price": 215,
+        "image": "src/assets/menu/special-dish-19a.jpg"
+      },
+      {
+        "name": "Special Dish 19B",
+        "price": 275,
+        "image": "src/assets/menu/special-dish-19b.jpg"
+      },
+      {
+        "name": "Special Dish 19C",
+        "price": 335,
+        "image": "src/assets/menu/special-dish-19c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Tandoori Treat",
+    "image": "src/assets/restaurants/tandoori-treat.jpg",
+    "deliveryTime": "38 min",
+    "distance": "4.8 km",
+    "rating": 4.0,
+    "type": "Veg & Non Veg",
+    "isOpen": false,
+    "menu": [
+      {
+        "name": "Special Dish 20A",
+        "price": 220,
+        "image": "src/assets/menu/special-dish-20a.jpg"
+      },
+      {
+        "name": "Special Dish 20B",
+        "price": 280,
+        "image": "src/assets/menu/special-dish-20b.jpg"
+      },
+      {
+        "name": "Special Dish 20C",
+        "price": 340,
+        "image": "src/assets/menu/special-dish-20c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Curry Leaf",
+    "image": "src/assets/restaurants/curry-leaf.jpg",
+    "deliveryTime": "39 min",
+    "distance": "5.0 km",
+    "rating": 4.1,
+    "type": "Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 21A",
+        "price": 225,
+        "image": "src/assets/menu/special-dish-21a.jpg"
+      },
+      {
+        "name": "Special Dish 21B",
+        "price": 285,
+        "image": "src/assets/menu/special-dish-21b.jpg"
+      },
+      {
+        "name": "Special Dish 21C",
+        "price": 345,
+        "image": "src/assets/menu/special-dish-21c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Urban Eats",
+    "image": "src/assets/restaurants/urban-eats.jpg",
+    "deliveryTime": "40 min",
+    "distance": "5.2 km",
+    "rating": 4.2,
+    "type": "Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 22A",
+        "price": 230,
+        "image": "src/assets/menu/special-dish-22a.jpg"
+      },
+      {
+        "name": "Special Dish 22B",
+        "price": 290,
+        "image": "src/assets/menu/special-dish-22b.jpg"
+      },
+      {
+        "name": "Special Dish 22C",
+        "price": 350,
+        "image": "src/assets/menu/special-dish-22c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Food Factory",
+    "image": "src/assets/restaurants/food-factory.jpg",
+    "deliveryTime": "18 min",
+    "distance": "5.4 km",
+    "rating": 4.3,
+    "type": "Veg & Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 23A",
+        "price": 235,
+        "image": "src/assets/menu/special-dish-23a.jpg"
+      },
+      {
+        "name": "Special Dish 23B",
+        "price": 295,
+        "image": "src/assets/menu/special-dish-23b.jpg"
+      },
+      {
+        "name": "Special Dish 23C",
+        "price": 355,
+        "image": "src/assets/menu/special-dish-23c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "The Hungry Fork",
+    "image": "src/assets/restaurants/the-hungry-fork.jpg",
+    "deliveryTime": "19 min",
+    "distance": "5.6 km",
+    "rating": 4.4,
+    "type": "Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 24A",
+        "price": 240,
+        "image": "src/assets/menu/special-dish-24a.jpg"
+      },
+      {
+        "name": "Special Dish 24B",
+        "price": 300,
+        "image": "src/assets/menu/special-dish-24b.jpg"
+      },
+      {
+        "name": "Special Dish 24C",
+        "price": 360,
+        "image": "src/assets/menu/special-dish-24c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Royal Feast",
+    "image": "src/assets/restaurants/royal-feast.jpg",
+    "deliveryTime": "20 min",
+    "distance": "5.8 km",
+    "rating": 4.5,
+    "type": "Non Veg",
+    "isOpen": false,
+    "menu": [
+      {
+        "name": "Special Dish 25A",
+        "price": 245,
+        "image": "src/assets/menu/special-dish-25a.jpg"
+      },
+      {
+        "name": "Special Dish 25B",
+        "price": 305,
+        "image": "src/assets/menu/special-dish-25b.jpg"
+      },
+      {
+        "name": "Special Dish 25C",
+        "price": 365,
+        "image": "src/assets/menu/special-dish-25c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Street Bites",
+    "image": "src/assets/restaurants/street-bites.jpg",
+    "deliveryTime": "21 min",
+    "distance": "6.0 km",
+    "rating": 4.6,
+    "type": "Veg & Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 26A",
+        "price": 250,
+        "image": "src/assets/menu/special-dish-26a.jpg"
+      },
+      {
+        "name": "Special Dish 26B",
+        "price": 310,
+        "image": "src/assets/menu/special-dish-26b.jpg"
+      },
+      {
+        "name": "Special Dish 26C",
+        "price": 370,
+        "image": "src/assets/menu/special-dish-26c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Fusion Kitchen",
+    "image": "src/assets/restaurants/fusion-kitchen.jpg",
+    "deliveryTime": "22 min",
+    "distance": "6.2 km",
+    "rating": 4.7,
+    "type": "Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 27A",
+        "price": 255,
+        "image": "src/assets/menu/special-dish-27a.jpg"
+      },
+      {
+        "name": "Special Dish 27B",
+        "price": 315,
+        "image": "src/assets/menu/special-dish-27b.jpg"
+      },
+      {
+        "name": "Special Dish 27C",
+        "price": 375,
+        "image": "src/assets/menu/special-dish-27c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Grill & Chill",
+    "image": "src/assets/restaurants/grill-and-chill.jpg",
+    "deliveryTime": "23 min",
+    "distance": "6.4 km",
+    "rating": 4.8,
+    "type": "Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 28A",
+        "price": 260,
+        "image": "src/assets/menu/special-dish-28a.jpg"
+      },
+      {
+        "name": "Special Dish 28B",
+        "price": 320,
+        "image": "src/assets/menu/special-dish-28b.jpg"
+      },
+      {
+        "name": "Special Dish 28C",
+        "price": 380,
+        "image": "src/assets/menu/special-dish-28c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Taste Haven",
+    "image": "src/assets/restaurants/taste-haven.jpg",
+    "deliveryTime": "24 min",
+    "distance": "6.6 km",
+    "rating": 4.9,
+    "type": "Veg & Non Veg",
+    "isOpen": true,
+    "menu": [
+      {
+        "name": "Special Dish 29A",
+        "price": 265,
+        "image": "src/assets/menu/special-dish-29a.jpg"
+      },
+      {
+        "name": "Special Dish 29B",
+        "price": 325,
+        "image": "src/assets/menu/special-dish-29b.jpg"
+      },
+      {
+        "name": "Special Dish 29C",
+        "price": 385,
+        "image": "src/assets/menu/special-dish-29c.jpg"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Crave Spot",
+    "image": "src/assets/restaurants/crave-spot.jpg",
+    "deliveryTime": "25 min",
+    "distance": "6.8 km",
+    "rating": 4.0,
+    "type": "Veg",
+    "isOpen": false,
+    "menu": [
+      {
+        "name": "Special Dish 30A",
+        "price": 270,
+        "image": "src/assets/menu/special-dish-30a.jpg"
+      },
+      {
+        "name": "Special Dish 30B",
+        "price": 330,
+        "image": "src/assets/menu/special-dish-30b.jpg"
+      },
+      {
+        "name": "Special Dish 30C",
+        "price": 390,
+        "image": "src/assets/menu/special-dish-30c.jpg"
+      }
+    ]
+  }
+]
